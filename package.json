@@ -51,9 +51,9 @@
     "react-dom": "^16.13.1",
     "react-test-renderer": "^16.13.0",
     "rimraf": "^3.0.2",
-    "ts-jest": "^26.1.3",
+    "ts-jest": "^29.1.2",
     "tweak-sourcemap-paths": "^0.0.4",
-    "typescript": "^3.9.7"
+    "typescript": "^5.3.3"
   },
   "lint-staged": {
     "**/*.js": [
@@ -67,8 +67,8 @@
     }
   },
   "dependencies": {
-    "@react-keycloak/core": "file:packages/core",
-    "@react-keycloak/ssr": "file:packages/ssr",
-    "@react-keycloak/web": "file:packages/web"
+    "@baolq/react-keycloak-core": "file:packages/core",
+    "@baolq/react-keycloak-ssr": "file:packages/ssr",
+    "@baolq/react-keycloak-web": "file:packages/web"
   }
 }

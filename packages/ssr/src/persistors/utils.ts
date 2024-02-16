@@ -8,6 +8,7 @@ export function setCookie(name: string, val: string | object) {
 }
 
 export function getCookie(name: string, cookies = {}) {
+  // @ts-ignore
   return isServer() ? cookies[name] : Cookie.get(name)
 }
 

@@ -1,5 +1,4 @@
-import type { AuthClient } from '@react-keycloak/core'
-import type { KeycloakConfig } from 'keycloak-js'
+import type { KeycloakConfig, KeycloakInstance } from 'keycloak-js'
 
 import type { TokenPersistor } from '../persistors/types'
 import type { SSRAuthClient } from '../types'
@@ -7,14 +6,16 @@ import type { SSRAuthClient } from '../types'
 import { isServer } from './utils'
 
 // Keycloak singleton
-let keycloakInstance: AuthClient
+let keycloakInstance: KeycloakInstance
 
 // KeycloakStub singleton
 let keycloakStubInstance: SSRAuthClient
 
 // this is a fake Keycloak instance we use to initialize Keycloak on the server.
 // This gets over-written as soon as Keycloak is initialized on the client.
-export const getKeycloakStub = (persistor: TokenPersistor): AuthClient => {
+export const getKeycloakStub = (
+  persistor: TokenPersistor
+): KeycloakInstance => {
   const kcTokens = persistor.getTokens()
 
   keycloakStubInstance = {

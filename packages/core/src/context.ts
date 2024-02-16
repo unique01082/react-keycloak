@@ -1,11 +1,11 @@
 import { createContext } from 'react'
 
-import { AuthClient } from './types'
+import { KeycloakInstance } from 'keycloak-js'
 
 /**
  * Auth Context props
  */
-export type IAuthContextProps<T extends AuthClient> = {
+export type IAuthContextProps<T extends KeycloakInstance> = {
   /**
    * The single AuthClient of your application.
    */
@@ -24,7 +24,7 @@ export type IAuthContextProps<T extends AuthClient> = {
  *
  * @returns {React.Context} the ReactKeycloak context.
  */
-export function createAuthContext<T extends AuthClient>(
+export function createAuthContext<T extends KeycloakInstance>(
   initialContext?: Partial<IAuthContextProps<T>>
 ): React.Context<IAuthContextProps<T>> {
   return createContext({

@@ -1,4 +1,4 @@
-import { createAuthProvider } from '@react-keycloak/core'
+import { createAuthProvider } from '@baolq/react-keycloak-core'
 
 import { reactKeycloakSsrContext } from './context'
 

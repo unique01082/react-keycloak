@@ -1,9 +1,9 @@
 import * as React from 'react'
 import isEqual from 'react-fast-compare'
 
+import { KeycloakInstance } from 'keycloak-js'
 import { IAuthContextProps } from './context'
 import {
-  AuthClient,
   AuthClientError,
   AuthClientEvent,
   AuthClientInitOptions,
@@ -13,7 +13,7 @@ import {
 /**
  * Props that can be passed to AuthProvider
  */
-export type AuthProviderProps<T extends AuthClient> = {
+export type AuthProviderProps<T extends KeycloakInstance> = {
   /**
    * The single AuthClient instance to be used by your application.
    */
@@ -76,7 +76,7 @@ type AuthProviderState = {
  *
  * @returns the AuthProvider component
  */
-export function createAuthProvider<T extends AuthClient>(
+export function createAuthProvider<T extends KeycloakInstance>(
   AuthContext: React.Context<IAuthContextProps<T>>
 ) {
   const defaultInitOptions: AuthClientInitOptions = {
@@ -137,10 +137,12 @@ export function createAuthProvider<T extends AuthClient>(
       authClient.onAuthRefreshError = this.onError('onAuthRefreshError')
       authClient.onAuthLogout = this.updateState('onAuthLogout')
       authClient.onTokenExpired = this.refreshToken('onTokenExpired')
-
-      authClient
-        .init({ ...defaultInitOptions, ...initOptions })
-        .catch(this.onError('onInitError'))
+      // @ts-ignore
+      if (!authClient.didInitialize) {
+        authClient
+          .init({ ...defaultInitOptions, ...initOptions })
+          .catch(this.onError('onInitError'))
+      }
     }
 
     onError = (event: AuthClientEvent) => (error?: AuthClientError) => {
@@ -217,7 +219,7 @@ export function createAuthProvider<T extends AuthClient>(
   }
 }
 
-function isUserAuthenticated(authClient: AuthClient) {
+function isUserAuthenticated(authClient: KeycloakInstance) {
   return !!authClient.idToken && !!authClient.token
 }
 

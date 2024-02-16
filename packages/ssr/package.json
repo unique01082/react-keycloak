@@ -1,5 +1,5 @@
 {
-  "name": "@react-keycloak/ssr",
+  "name": "@baolq/react-keycloak-ssr",
   "version": "3.3.0",
   "license": "MIT",
   "description": "SSR bindings for Keycloak javascript adapter",
@@ -46,7 +46,7 @@
     "test": "jest",
     "test:coverage": "jest --coverage",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
-    "prepublishOnly": "npm run build && cp ../../LICENSE.md ."
+    "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
     "keycloak-js": ">=9.0.2",
@@ -60,7 +60,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.9.0",
-    "@react-keycloak/core": "file:../core",
+    "@baolq/react-keycloak-core": "file:../core",
     "detect-node": "^2.0.4",
     "hoist-non-react-statics": "^3.3.2",
     "js-base64": "^3.4.5",

@@ -1,9 +1,6 @@
-import type { AuthClient } from '@react-keycloak/core'
 import type { KeycloakInstance } from 'keycloak-js'
 
-export interface SSRAuthClient
-  extends Omit<KeycloakInstance, 'init' | 'updateToken'>,
-    AuthClient {
+export interface SSRAuthClient extends KeycloakInstance {
   /** A boolean indicating if the user is authenticated or not. */
   authenticated?: boolean
 }

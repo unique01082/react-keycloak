@@ -1,10 +1,10 @@
-import { createAuthContext } from '@react-keycloak/core'
-import type { AuthClient } from '@react-keycloak/core'
+import { createAuthContext } from '@baolq/react-keycloak-core'
 
 import { isServer } from './utils'
+import { KeycloakInstance } from 'keycloak-js'
 
 // Context to hold Keycloak and his state
-export const reactKeycloakSsrContext = createAuthContext<AuthClient>({
+export const reactKeycloakSsrContext = createAuthContext<KeycloakInstance>({
   initialized: isServer(),
 })
 
