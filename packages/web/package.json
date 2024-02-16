@@ -1,6 +1,6 @@
 {
   "name": "@baolq/react-keycloak-web",
-  "version": "3.4.0",
+  "version": "4.0.0",
   "license": "MIT",
   "description": "React bindings for Keycloak javascript adapter",
   "repository": {

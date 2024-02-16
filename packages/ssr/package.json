@@ -1,6 +1,6 @@
 {
   "name": "@baolq/react-keycloak-ssr",
-  "version": "3.3.0",
+  "version": "3.4.0",
   "license": "MIT",
   "description": "SSR bindings for Keycloak javascript adapter",
   "repository": {
