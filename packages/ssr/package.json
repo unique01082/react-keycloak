@@ -60,7 +60,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.9.0",
-    "@baolq/react-keycloak-core": "file:../core",
+    "@baolq/react-keycloak-core": "^4.0.0",
     "detect-node": "^2.0.4",
     "hoist-non-react-statics": "^3.3.2",
     "js-base64": "^3.4.5",
@@ -69,5 +69,6 @@
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "jsdom"
-  }
+  },
+  "gitHead": "89b0a37c524d9fffc9141ff8ae3ffae7d550d4a9"
 }
