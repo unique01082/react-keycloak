@@ -1,6 +1,6 @@
 {
   "name": "@baolq/react-keycloak-core",
-  "version": "4.0.1",
+  "version": "4.1.0",
   "license": "MIT",
   "description": "React bindings for Keycloak javascript adapter (core)",
   "repository": {

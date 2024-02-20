@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0](https://github.com/react-keycloak/react-keycloak/compare/@baolq/react-keycloak-core@4.0.1...@baolq/react-keycloak-core@4.1.0) (2024-02-20)
+
+
+### Features
+
+* notify when keycloak instance already ready ([cd7c40d](https://github.com/react-keycloak/react-keycloak/commit/cd7c40d1544472daa503c2a0deb24a96fd5a5717))
+
+
+
+
+
 ## [4.0.1](https://github.com/react-keycloak/react-keycloak/compare/@baolq/react-keycloak-core@4.0.0...@baolq/react-keycloak-core@4.0.1) (2024-02-16)
 
 **Note:** Version bump only for package @baolq/react-keycloak-core
