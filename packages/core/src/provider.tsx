@@ -142,6 +142,8 @@ export function createAuthProvider<T extends KeycloakInstance>(
         authClient
           .init({ ...defaultInitOptions, ...initOptions })
           .catch(this.onError('onInitError'))
+      } else {
+        authClient.onReady()
       }
     }
 
